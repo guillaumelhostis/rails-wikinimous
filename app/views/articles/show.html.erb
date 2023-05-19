@@ -1,0 +1,16 @@
+
+<div class="title">
+<h1><%= @article.title %></h1>
+</div>
+<div class="crud">
+<div class="btn btn-primary"><%= link_to "All quotes", articles_path %></div>
+
+<div class="btn btn-primary"><%= link_to "Edit article", edit_article_path(@article) %></div>
+
+<div class="btn btn-primary"><%= link_to "Delete article",
+  article_path(@article),
+  data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}
+%></div>
+</div>
+
+<p><%= @article.content %></p>
